@@ -1,10 +1,21 @@
+import BgGradient from "@/components/BgGradient";
+import DemoSection from "@/components/DemoSection";
+import HeroSection from "@/components/HeroSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
 import Image from "next/image";
 
 export default function Home() {
 
   return (
-    <div className="">
-      Hello
+    <div className="relative w-full">
+      <BgGradient />
+      <div className="flex flex-col">
+        <HeroSection />
+        <DemoSection />
+        <HowItWorksSection />
+        {/* <PricingSection />
+        <CTASection /> */}
+      </div>
     </div>
   );
 }
