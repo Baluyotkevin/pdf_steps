@@ -8,7 +8,7 @@ type Step = {
     description: string;
 }
 
-    const steps: Step[] = [
+const steps: Step[] = [
         {
             icon: <FileText size={64} strokeWidth={1.5} />,
             label: "Upload your PDF",
@@ -22,7 +22,7 @@ type Step = {
         {
             icon: <FileOutput size={64} strokeWidth={1.5} />,
             label: "Get Summary",
-            description: "Recieve a clear, concise summary of your document",
+            description: "Receive a clear, concise summary of your document",
         },
     ]
 const HowItWorksSection = () => {
@@ -39,8 +39,8 @@ const HowItWorksSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto-relative">
                 {steps.map((step, idx) => (
-                    <div className="relative flex items-stretch">
-                        <StepItem key={idx} {...step} />
+                    <div key={idx} className="relative flex items-stretch">
+                        <StepItem {...step} />
                         {idx < steps.length - 1 && <div className="hidden absolute md:block top-1/2 -right-4 transform -translate-y-1/2 z-10">
                             <MoveRight size={32} strokeWidth={1} className="text-rose-400" />
                         </div>}
